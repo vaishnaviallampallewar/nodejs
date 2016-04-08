@@ -18,7 +18,7 @@ app.post('/submit',function(req,res){
     return res.json({"responseCode" : 1,"responseDesc" : "Please select captcha"});
   }
   // Put your secret key here.
-  var secretKey = "--paste your secret key here--";
+  var secretKey = "6LcX1v4SAAAAAD6gha77Uy7781vLwV1xkVhoejuQ";
   // req.connection.remoteAddress will provide IP address of connected user.
   var verificationUrl = "https://www.google.com/recaptcha/api/siteverify?secret=" + secretKey + "&response=" + req.body['g-recaptcha-response'] + "&remoteip=" + req.connection.remoteAddress;
   // Hitting GET request to the URL, Google will respond with success or error scenario.
