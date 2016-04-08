@@ -1,0 +1,9 @@
+#!/bin/sh
+
+ssh shahid@104.131.231.142 <<EOF
+  cd /home/shahid/google-recaptcha-node/
+  git pull
+  npm install --production
+  pm2 restart all
+  exit
+EOF
